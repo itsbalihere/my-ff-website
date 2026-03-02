@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Reviews</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="rating" class="form-label">Rating</label>
+    <select class="form-select" id="rating" name="rating" required>
+      <option value="">Choose...</option>
+      {% for i in range(1,6) %}
+      <option value="{{ i }}">{{ i }} stars</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea class="form-control" id="message" name="message" rows="2" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit Review</button>
+</form>
+<hr>
+<div class="reviews-list">
+  {% for r in reviews %}
+  <div class="card bg-secondary mb-2">
+    <div class="card-body">
+      <h5 class="card-title">{{ r.name }}
+        <span class="text-warning">
+          {% for i in range(r.rating) %}★{% endfor %}
+          {% for i in range(5-r.rating) %}☆{% endfor %}
+        </span>
+      </h5>
+      <p class="card-text">{{ r.message }}</p>
+      <small class="text-muted">{{ r.created_at }}</small>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}

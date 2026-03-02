@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Contact Us</h2>
+<p>Phone: 03375673274</p>
+<p>Location: Topi, KPK</p>
+<p>TikTok ID: <code>@yourtiktok</code></p>
+<p>Join our WhatsApp group: <a href="https://chat.whatsapp.com/IkUN5wLpIZh0vEx63PO4SA?mode=hqctsha" target="_blank">Click here</a></p>
+<hr>
+<form method="POST" action="">
+  <div class="mb-3">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" id="name" name="name" required>
+  </div>
+  <div class="mb-3">
+    <label for="message" class="form-label">Message</label>
+    <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Send</button>
+</form>
+{% endblock %}

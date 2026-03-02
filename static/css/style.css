@@ -1,0 +1,47 @@
+/* Professional Gaming Team Theme */
+body {
+    background-color: #121212; /* Consistent dark background */
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://via.placeholder.com/1200x400?text=Gaming+Hero');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 6rem 2rem; /* Adds breathing room */
+    text-align: center;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eee;
+    /* Add additional styling like hover effects if needed */
+}
+
+/* Badges Section */
+.badges .badge {
+    font-size: 1.2rem; /* Slightly smaller than original for professionalism */
+    font-weight: bold;
+    padding: 0.75rem 1.25rem; /* Better horizontal padding */
+    background-color: #1e1e1e; /* Subtle background for badges */
+    border-radius: 50px; /* Pill shape */
+    display: inline-block;
+    margin: 0.25rem;
+    transition: all 0.3s ease;
+}
+
+/* Optional: Badge hover effect for interactivity */
+.badges .badge:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
